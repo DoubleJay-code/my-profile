@@ -8,6 +8,7 @@
     <div class="info-form__elem">
       <label class="info-form__label">Дата рождения</label>
       <MyInput
+        placeholder="дд.мм.гггг"
         class="info-form__input"
         name="birthDate"
         type="text"
@@ -28,7 +29,10 @@
     <div class="info-form__elem">
       <label class="info-form__label">Номер телефона</label>
       <div class="info-form__input">
-        <select @change="$emit('sendCountryCode', sendCountryCode($event))">
+        <select
+          class="bg"
+          @change="$emit('sendCountryCode', sendCountryCode($event))"
+        >
           <option :value="personalInfo.selectedCountryCode">+7</option>
           <option
             v-for="code in personalInfo.countryCodes"
@@ -42,6 +46,7 @@
           :value="personalInfo.selectedCountryCode"
           name="phone"
           type="text"
+          class="bg"
           @input="applyMaskPhone"
           inside
         />

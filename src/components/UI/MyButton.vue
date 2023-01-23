@@ -20,8 +20,8 @@ button {
   min-width: 160px;
   max-width: 250px;
   height: 40px;
+  font-weight: 500;
   font-size: 16px;
-  font-weight: 700;
   border-radius: 15px;
   padding: 0 15px;
 }

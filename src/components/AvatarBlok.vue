@@ -36,10 +36,9 @@ const props = defineProps({
 .avatar-form {
   padding: 15px;
   margin-bottom: 20px;
-  border-bottom: 2px dotted black;
   .avatar-form__title {
-    font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 20px;
   }
   .avatar-form__image {
     width: 100px;

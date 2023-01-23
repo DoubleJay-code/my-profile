@@ -4,7 +4,7 @@
     color: white;
 }
 .green {
-    background: #1bbc9b;
+    background: #5FB677;
     color: #fff;
 }
 
@@ -23,18 +23,19 @@
 .flexWrap {
     flex-wrap: wrap;
 }
+.bg {
+  background: #f5f5f5;
+}
 
 // блок персональной инфы
 .info-form {
   font-weight: bold;
-  border-bottom: 2px dotted black;
   .info-form__elem {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
-    border: 1px solid black;
     padding: 5px;
     label {
       span {
@@ -44,17 +45,19 @@
     .info-form__label {
       flex: 0 1 150px;
       margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 20px;
     }
     .info-form__input {
       flex: 0 1 230px;
-      border: 1px solid black;
       padding: 5px 10px;
-      border-radius: 15px;
       margin-bottom: 10px;
     }
     .info-form__data {
       flex: 0 1 200px;
       text-align: left;
+      font-weight: 500;
+      font-size: 18px;
     }
   }
 }

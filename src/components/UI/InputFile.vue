@@ -33,14 +33,14 @@ const props = defineProps({
     min-width: 160px;
     max-width: 250px;
     height: 40px;
-    background: #1bbc9b;
+    background: #5fb677;
     color: #fff;
+    font-weight: 500;
     font-size: 16px;
-    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
     margin: 0 auto;
     padding: 0 15px;

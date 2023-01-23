@@ -21,14 +21,14 @@ const avatar = ref({
   defaultAvatar: "https://hornews.com/upload/images/blank-avatar.jpg",
 });
 const personalInfo = ref({
-  fullName: "Не назначено",
-  birthDate: "Не назначено",
-  email: "Не назначено",
-  city: "Не назначено",
-  phone: "Не назначено",
+  fullName: "",
+  birthDate: "",
+  email: "",
+  city: "",
+  phone: "",
   selectedCountryCode: "+7",
   countryCodes: ["+1", "+3"],
-  selectedLanguages: "Не назначено",
+  selectedLanguages: "",
   languages: ["English", "French", "Spanish"],
 });
 let password = ref("");

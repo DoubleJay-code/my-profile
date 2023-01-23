@@ -9,7 +9,7 @@
       <MyInput
         type="password"
         name="newPassword"
-        class="password-form__input"
+        class="password-form__input bg"
         required
       />
       <MyButton green>Cохранить изминения</MyButton>
@@ -21,21 +21,21 @@
         type="password"
         name="oldPass"
         placeholder="Cтарый пароль"
-        class="password-form__input"
+        class="password-form__input bg"
         required
       />
       <MyInput
         type="password"
         name="newPasswordFirst"
         placeholder="Новый пароль"
-        class="password-form__input"
+        class="password-form__input bg"
         required
       />
       <MyInput
         type="password"
         name="newPasswordSecond"
         placeholder="Повторите новый пароль"
-        class="password-form__input"
+        class="password-form__input bg"
         required
       />
       <MyButton green>Cохранить изминения</MyButton>
@@ -99,21 +99,24 @@ const sendForm = (event) => {
 
 <style lang="scss">
 .password-form {
-  padding: 15px;
+  padding-top: 15px;
   p {
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 18px;
     color: red;
     margin-bottom: 5px;
   }
   .password-form__title {
+    font-weight: 500;
+    font-size: 20px;
     margin-bottom: 15px;
   }
   .password-form__input {
-    border: 1px solid black;
+    border: 1px solid #c7c7c7;
+    border-radius: 10px;
     max-width: 270px;
     min-width: 270px;
     padding: 5px 10px;
-    border-radius: 15px;
     margin-bottom: 10px;
   }
 }
