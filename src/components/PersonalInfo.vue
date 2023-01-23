@@ -79,7 +79,7 @@
       </p>
     </div>
     <MyButton green :class="{ marginBottom15: true }"
-      >Cохранить изминения</MyButton
+      >Cохранить изменения</MyButton
     >
   </form>
 </template>

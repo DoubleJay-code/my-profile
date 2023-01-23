@@ -38,7 +38,7 @@
         class="password-form__input bg"
         required
       />
-      <MyButton green>Cохранить изминения</MyButton>
+      <MyButton green>Cохранить изменения</MyButton>
     </div>
   </form>
 </template>
