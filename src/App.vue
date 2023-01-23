@@ -1,7 +1,12 @@
 <template>
   <div class="wrapper">
     <AvatarBlok @clearAvatar="clearAvatar" :avatar="avatar" />
-    <PersonalInfo @sendData="changePersonalInfo" :personalInfo="personalInfo" />
+    <PersonalInfo
+      @sendCountryCode="countryCode"
+      @sendData="changePersonalInfo"
+      :personalInfo="personalInfo"
+    />
+    <PasswordBlok @sendPass="changePassword" :password="password" />
   </div>
 </template>
 
@@ -9,12 +14,12 @@
 import { ref } from "vue";
 import AvatarBlok from "@/components/AvatarBlok.vue";
 import PersonalInfo from "@/components/PersonalInfo.vue";
+import PasswordBlok from "./components/PasswordBlok.vue";
 
 const avatar = ref({
   avatar: "https://klike.net/uploads/posts/2020-06/1593063514_1.jpg",
   defaultAvatar: "https://hornews.com/upload/images/blank-avatar.jpg",
 });
-
 const personalInfo = ref({
   fullName: "Не назначено",
   birthDate: "Не назначено",
@@ -22,10 +27,11 @@ const personalInfo = ref({
   city: "Не назначено",
   phone: "Не назначено",
   selectedCountryCode: "+7",
-  countryCodes: ["+1", "+44", "+81"],
+  countryCodes: ["+1", "+3"],
   selectedLanguages: "Не назначено",
   languages: ["English", "French", "Spanish"],
 });
+let password = ref("");
 
 const clearAvatar = (str) => {
   avatar.value.avatar = str;
@@ -37,6 +43,13 @@ const changePersonalInfo = (formData) => {
   personalInfo.value.city = formData.get("city");
   personalInfo.value.phone = formData.get("phone");
   personalInfo.value.selectedLanguages = formData.get("selectedLanguages");
+};
+const changePassword = (newPass) => {
+  console.log(newPass);
+  password.value = newPass;
+};
+const countryCode = (data) => {
+  personalInfo.value.selectedCountryCode = data;
 };
 </script>
 

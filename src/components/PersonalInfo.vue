@@ -7,7 +7,12 @@
     </div>
     <div class="info-form__elem">
       <label class="info-form__label">Дата рождения</label>
-      <MyInput class="info-form__input" name="birthDate" type="text" />
+      <MyInput
+        class="info-form__input"
+        name="birthDate"
+        type="text"
+        @input="applyMaskDate"
+      />
       <p class="info-form__data">{{ personalInfo.birthDate }}</p>
     </div>
     <div class="info-form__elem">
@@ -23,7 +28,7 @@
     <div class="info-form__elem">
       <label class="info-form__label">Номер телефона</label>
       <div class="info-form__input">
-        <select>
+        <select @change="$emit('sendCountryCode', sendCountryCode($event))">
           <option :value="personalInfo.selectedCountryCode">+7</option>
           <option
             v-for="code in personalInfo.countryCodes"
@@ -33,9 +38,17 @@
             {{ code }}
           </option>
         </select>
-        <MyInput name="phone" type="text" inside />
+        <MyInput
+          :value="personalInfo.selectedCountryCode"
+          name="phone"
+          type="text"
+          @input="applyMaskPhone"
+          inside
+        />
       </div>
-      <p class="info-form__data">{{ personalInfo.phone }}</p>
+      <p class="info-form__data">
+        {{ personalInfo.phone }}
+      </p>
     </div>
     <div class="info-form__elem">
       <label class="info-form__label" for="languages">Владение языками</label>
@@ -60,7 +73,9 @@
         <span>{{ personalInfo.selectedLanguages }}</span>
       </p>
     </div>
-    <MyButton green>Cохранить изминения</MyButton>
+    <MyButton green :class="{ marginBottom15: true }"
+      >Cохранить изминения</MyButton
+    >
   </form>
 </template>
 
@@ -68,6 +83,7 @@
 import { defineProps } from "vue";
 import MyButton from "./UI/MyButton.vue";
 import MyInput from "./UI/MyInput.vue";
+import { applyMaskPhone, applyMaskDate } from "../helpers/helpers";
 
 const props = defineProps({
   personalInfo: {
@@ -82,43 +98,16 @@ const props = defineProps({
     languages: Array,
   },
 });
+
 const sendForm = (event) => {
   const formElement = event.target;
   const formData = new FormData(formElement);
   return formData;
 };
+
+const sendCountryCode = (event) => {
+  return event.target.value;
+};
 </script>
 
-<style lang="scss">
-.info-form {
-  font-weight: bold;
-  .info-form__elem {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    border: 1px solid black;
-    padding: 5px;
-    .info-form__label {
-      flex: 0 1 150px;
-    }
-    .info-form__input {
-      flex: 0 1 230px;
-      border: 1px solid black;
-      padding: 5px 10px;
-      border-radius: 15px;
-    }
-    .info-form__data {
-      flex: 0 1 200px;
-      text-align: left;
-    }
-  }
-}
-label {
-  span {
-    color: red;
-  }
-}
-</style>
-
-<!-- <input name="name" class="info-form__input" type="text" required /> -->
+<style lang="scss"></style>

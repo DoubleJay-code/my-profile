@@ -1,5 +1,5 @@
 <template>
-  <div class="input" :class="{ marginRight: props.mR, marginTop10: mT }">
+  <div class="input" :class="{ marginRight20: props.mR, marginTop10: mT }">
     <label for="input__file">
       <input
         name="file"

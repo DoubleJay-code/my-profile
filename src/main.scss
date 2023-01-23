@@ -9,14 +9,52 @@
 }
 
 // внешние отступы
-.marginRight {
+.marginRight20 {
     margin-right: 20px;
 }
 .marginTop10 {
     margin-top: 10px;
 }
+.marginBottom15 {
+  margin-bottom: 15px;
+}
 
 // другое
 .flexWrap {
     flex-wrap: wrap;
+}
+
+// блок персональной инфы
+.info-form {
+  font-weight: bold;
+  border-bottom: 2px dotted black;
+  .info-form__elem {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    label {
+      span {
+        color: red;
+      }
+    }
+    .info-form__label {
+      flex: 0 1 150px;
+      margin-bottom: 10px;
+    }
+    .info-form__input {
+      flex: 0 1 230px;
+      border: 1px solid black;
+      padding: 5px 10px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .info-form__data {
+      flex: 0 1 200px;
+      text-align: left;
+    }
+  }
 }
