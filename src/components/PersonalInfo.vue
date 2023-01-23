@@ -11,8 +11,7 @@
         placeholder="дд.мм.гггг"
         class="info-form__input"
         name="birthDate"
-        type="text"
-        @input="applyMaskDate"
+        type="date"
       />
       <p class="info-form__data">{{ personalInfo.birthDate }}</p>
     </div>
@@ -79,7 +78,7 @@
       </p>
     </div>
     <MyButton green :class="{ marginBottom15: true }"
-      >Cохранить изменения</MyButton
+      >Cохранить изминения</MyButton
     >
   </form>
 </template>
@@ -88,7 +87,7 @@
 import { defineProps } from "vue";
 import MyButton from "./UI/MyButton.vue";
 import MyInput from "./UI/MyInput.vue";
-import { applyMaskPhone, applyMaskDate } from "../helpers/helpers";
+import { applyMaskPhone } from "../helpers/helpers";
 
 const props = defineProps({
   personalInfo: {
