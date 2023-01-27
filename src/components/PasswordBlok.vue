@@ -12,7 +12,7 @@
         class="password-form__input bg"
         required
       />
-      <MyButton green>Cохранить изминения</MyButton>
+      <MyButton outerGreen green>Cохранить изменения</MyButton>
     </div>
     <div v-if="password" class="password-form__present">
       <h2 class="password-form__title">Поменять Пароль:</h2>
@@ -38,7 +38,7 @@
         class="password-form__input bg"
         required
       />
-      <MyButton green>Cохранить изменения</MyButton>
+      <MyButton outerGreen green>Cохранить изменения</MyButton>
     </div>
   </form>
 </template>
@@ -113,11 +113,15 @@ const sendForm = (event) => {
   }
   .password-form__input {
     border: 1px solid #c7c7c7;
+    height: 35px;
     border-radius: 10px;
     max-width: 270px;
     min-width: 270px;
     padding: 5px 10px;
     margin-bottom: 10px;
+    &:focus {
+      border: 2px solid rgb(52, 209, 209);
+    }
   }
 }
 .password-form__absent {

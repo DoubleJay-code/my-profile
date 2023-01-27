@@ -7,6 +7,12 @@
     background: #5FB677;
     color: #fff;
 }
+.outerRed{
+  background: rgba(205, 0, 0, 0.8);
+}
+.outerGreen{
+  background: #448456c0;
+}
 
 // внешние отступы
 .marginRight20 {
@@ -50,8 +56,14 @@
     }
     .info-form__input {
       flex: 0 1 230px;
+      height: 35px;
       padding: 5px 10px;
-      margin-bottom: 10px;
+      background: #f5f5f5;
+      border: 1px solid #c7c7c7;
+      border-radius: 10px;
+      &:focus {
+        border: 2px solid rgb(52, 209, 209);
+      }
     }
     .info-form__data {
       flex: 0 1 200px;

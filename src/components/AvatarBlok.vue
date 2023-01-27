@@ -5,7 +5,12 @@
         <h2 class="avatar-form__title">Ваш аватар:</h2>
         <FlexBlokRow fW>
           <InputFile mR mT />
-          <MyButton @click="$emit('clearAvatar', '')" :type="'reset'" red mT
+          <MyButton
+            @click="$emit('clearAvatar', '')"
+            :type="'reset'"
+            red
+            mT
+            outerRed
             >Удалить аватар</MyButton
           >
         </FlexBlokRow>

@@ -44,7 +44,7 @@
         <MyInput
           :value="personalInfo.selectedCountryCode"
           name="phone"
-          type="text"
+          type="phone"
           class="bg"
           @input="applyMaskPhone"
           inside
@@ -77,7 +77,7 @@
         <span>{{ personalInfo.selectedLanguages }}</span>
       </p>
     </div>
-    <MyButton green :class="{ marginBottom15: true }"
+    <MyButton outerGreen green :class="{ marginBottom15: true }"
       >Cохранить изменения</MyButton
     >
   </form>
